@@ -673,7 +673,7 @@ export default function Hero() {
           {/* Character Container with Vertical Digital Wipe Reveal */}
           <div
             id="hero-video-frame"
-            className={`relative flex items-center justify-center z-10 transition-all duration-900 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`relative flex items-center justify-center z-10 w-full max-w-[calc(100vw-32px)] sm:w-auto sm:max-w-none transition-all duration-900 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               prefersReducedMotion || animationPhase === "settled"
                 ? "opacity-100 scale-100 translate-y-0"
                 : animationPhase === "revealing"
@@ -731,7 +731,7 @@ export default function Hero() {
               aria-label={getSoundButtonLabel()}
               aria-pressed={playbackState === "playing-unmuted"}
               title={getSoundButtonLabel()}
-              className={`absolute bottom-3 right-1 sm:right-0 w-[46px] h-[46px] rounded-full bg-[var(--ink)] text-[var(--paper)] flex items-center justify-center shadow-md hover:bg-[var(--ink-2)] transition-all duration-500 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 z-20 cursor-pointer ${
+              className={`absolute bottom-3 right-2 sm:bottom-3 sm:right-0 w-[46px] h-[46px] rounded-full bg-[var(--ink)] text-[var(--paper)] border border-white/20 shadow-lg flex items-center justify-center hover:bg-[var(--ink-2)] transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 z-20 cursor-pointer ${
                 prefersReducedMotion ||
                 animationPhase === "revealing" ||
                 animationPhase === "settled"
